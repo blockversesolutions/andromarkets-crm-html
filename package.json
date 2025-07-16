@@ -1,15 +1,9 @@
 {
-  "name": "crm-andromarkets",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "dev": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "tailwindcss": "^3.4.17"
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch"
   }
 }
