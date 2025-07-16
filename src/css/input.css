@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-montserrat;
+  }
+  .divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #e0e0e0;
+  }
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ffffff26;
+    margin: 0 14px;
+  }
+  .checkbox-label:before {
+    content: "";
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+      inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 8px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 2px;
+  }
+  input:checked + .checkbox-label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    width: 6px;
+    height: 11px;
+    border: solid #fcd331;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .pointer {
+    cursor: pointer;
+  }
+  input:checked + .checkbox-label:before {
+    border-color: #fcd331;
+  }
+}
+
+/*  Your custom grid system */
+@layer components {
+  .container {
+    @apply max-w-[1238px] mx-auto px-4;
+  }
+  .row {
+    @apply flex flex-wrap;
+  }
+  .col-1 {
+    @apply w-1/6;
+  }
+  .col-2 {
+    @apply w-1/5;
+  }
+  .col-3 {
+    @apply w-1/4;
+  }
+  .col-4 {
+    @apply w-1/3;
+  }
+  .col-5 {
+    @apply w-2/5;
+  }
+  .col-6 {
+    @apply w-1/2;
+  }
+  .col-7 {
+    @apply w-3/5;
+  }
+  .col-8 {
+    @apply w-2/3;
+  }
+  .col-9 {
+    @apply w-3/4;
+  }
+  .col-10 {
+    @apply w-4/5;
+  }
+  .col-11 {
+    @apply w-5/6;
+  }
+  .col-12 {
+    @apply w-full;
+  }
+
+  .heading-md {
+    @apply font-semibold text-[22px] text-white leading-[100%];
+  }
+  .label {
+    @apply font-medium text-[16px] text-white;
+  }
+  .input {
+    @apply w-full rounded-[10px] font-medium text-[16px] text-white bg-[#FFFFFF14] py-3 px-5 ps-[52px] mt-3 border border-transparent placeholder:text-[#FFFFFF4D] placeholder:font-normal  focus:border-[1px] focus:border-primary-900 focus:outline-none;
+  }
+  .primary-btn {
+    @apply w-full rounded-[100px] p-3 lg:p-[14px] bg-primary-900 text-dark-500 font-semibold text-[16px] hover:bg-primary-400 duration-500 hover:shadow-[0_20px_25px_0_rgba(204,164,52,0.2)];
+  }
+  .secondary-btn {
+    @apply flex justify-center gap-x-2 rounded-[100px] p-3 lg:p-[14px] bg-[#0000004D] text-[#E0E0E0] font-medium text-[16px] hover:bg-[#2725254d] duration-500;
+  }
+  .code-inputs input{
+    @apply border rounded-[100px] text-white h-8 w-11 lg:h-11 lg:w-16 bg-transparent mt-4 text-center font-medium text-sm lg:text-xl
+  }
+  .valid-otp input{
+    @apply  border-[#4CAF50]  text-[#4CAF50]
+  }
+  .error-otp input{
+    @apply  border-[#FE6D8E]  text-[#FE6D8E]
+  }
+}
