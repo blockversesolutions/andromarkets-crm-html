@@ -4,9 +4,22 @@
   body {
     font-family: "Montserrat", sans-serif;
   }
- li.active {
-    border-left-color: #FCD331 !important;
+ .before-line-bar {
+    position: relative;
   }
+ .before-line-bar:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top:4px;
+    height:42px;
+    width: 2px;
+    background-color: #fcd331;
+    opacity: 0;
+  }
+   .active.before-line-bar:after{
+    opacity: 1;
+   }
   .divider {
     display: flex;
     align-items: center;
@@ -76,6 +89,9 @@
     @apply max-w-[1238px] mx-auto px-4;
   }
 
+  .heading-sm {
+    @apply font-medium text-lg text-white;
+  }
   .heading-md {
     @apply font-semibold text-[22px] text-white leading-[100%];
   }

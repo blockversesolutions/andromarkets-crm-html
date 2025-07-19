@@ -647,121 +647,80 @@
       <!-- Main Content -->
       <div
         id="mainContent"
-        class="flex-1 transition-all duration-30 bg-[#0A0600] px-6 overflow-auto relative mt-4"
+        class="flex-1 transition-all duration-30 bg-[#0A0600] px-6"
       >
         <button onclick="toggleSidebar()" class="text-white p-2">⬅</button>
         <div
-          class="bg-[#271C07] rounded-2xl py-4 px-6 flex items-center gap-2.5 justify-between sticky top-0"
+          class="bg-[#271C07] rounded-2xl py-4 px-6 flex items-center gap-2.5 justify-between"
         >
           <h5 class="heading-sm">Dashboard</h5>
           <div class="flex items-center gap-3.5">
-            <div class="min-w-[448px] bg-[#322713] rounded-[72px] w-full">
-              <form action="">
-                <div class="relative">
-                  <input
-                    type="search"
-                    class="w-full py-3 px-5 text-white text-sm pl-12 focus:outline-0 focus:bg-[#160F04] rounded-[72px]"
-                    placeholder="Search"
-                  />
-                  <div class="absolute top-2/4 left-4 transform -translate-y-2/4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M10.5 3.74989C9.61358 3.74989 8.73583 3.92448 7.91689 4.2637C7.09794 4.60292 6.35382 5.10012 5.72703 5.72692C5.10023 6.35371 4.60303 7.09783 4.26381 7.91678C3.92459 8.73572 3.75 9.61347 3.75 10.4999C3.75 11.3863 3.92459 12.2641 4.26381 13.083C4.60303 13.9019 5.10023 14.6461 5.72703 15.2729C6.35382 15.8997 7.09794 16.3969 7.91689 16.7361C8.73583 17.0753 9.61358 17.2499 10.5 17.2499C12.2902 17.2499 14.0071 16.5387 15.273 15.2729C16.5388 14.007 17.25 12.2901 17.25 10.4999C17.25 8.70968 16.5388 6.99279 15.273 5.72692C14.0071 4.46105 12.2902 3.74989 10.5 3.74989ZM2.25 10.4999C2.25017 9.17499 2.56944 7.86961 3.18079 6.69419C3.79214 5.51876 4.67759 4.50787 5.76224 3.74701C6.84689 2.98615 8.09883 2.49771 9.41216 2.32301C10.7255 2.14831 12.0616 2.29249 13.3074 2.74334C14.5533 3.1942 15.6722 3.93847 16.5695 4.91321C17.4669 5.88794 18.1163 7.06446 18.4628 8.34325C18.8094 9.62204 18.8428 10.9655 18.5603 12.2599C18.2778 13.5544 17.6878 14.7617 16.84 15.7799L21.53 20.4699C21.6037 20.5386 21.6628 20.6214 21.7038 20.7134C21.7448 20.8053 21.7668 20.9047 21.7686 21.0054C21.7704 21.1061 21.7518 21.2061 21.7141 21.2995C21.6764 21.3929 21.6203 21.4777 21.549 21.5489C21.4778 21.6201 21.393 21.6763 21.2996 21.714C21.2062 21.7517 21.1062 21.7703 21.0055 21.7685C20.9048 21.7667 20.8055 21.7447 20.7135 21.7037C20.6215 21.6627 20.5387 21.6036 20.47 21.5299L15.78 16.8399C14.5752 17.8434 13.1094 18.4828 11.5543 18.6831C9.99922 18.8835 8.41922 18.6366 6.99941 17.9713C5.5796 17.306 4.37878 16.2499 3.53763 14.9266C2.69648 13.6034 2.24983 12.0678 2.25 10.4999Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="flex items-center gap-3.5">
-              <div
-                class="flex items-center justify-center h-11 w-11 rounded-full bg-[#FFFFFF0D] relative pointer hover:bg-[#ffffff1e] duration-500"
+            <div
+              class="flex items-center justify-center h-11 w-11 rounded-full bg-[#FFFFFF0D] relative pointer hover:bg-[#ffffff1e] duration-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="25"
-                  viewBox="0 0 24 25"
-                  fill="none"
-                >
-                  <g clip-path="url(#clip0_2409_6243)">
-                    <path
-                      d="M20.5196 15.7101L18.7196 13.9001V9.44014C18.7435 7.78396 18.1674 6.17505 17.0977 4.91048C16.028 3.6459 14.5368 2.81107 12.8996 2.56014C11.9494 2.43501 10.9834 2.51395 10.0662 2.79171C9.14893 3.06947 8.30146 3.53966 7.58031 4.1709C6.85916 4.80214 6.28093 5.57992 5.88419 6.45233C5.48745 7.32475 5.28133 8.27175 5.27958 9.23014V13.9001L3.47958 15.7101C3.25349 15.94 3.10017 16.2314 3.03879 16.5479C2.9774 16.8645 3.01068 17.1921 3.13446 17.4898C3.25824 17.7875 3.46704 18.0421 3.73474 18.2218C4.00244 18.4015 4.31717 18.4983 4.63958 18.5001H7.99958V18.8401C8.04629 19.8553 8.49354 20.8106 9.24331 21.4967C9.99308 22.1827 10.9842 22.5436 11.9996 22.5001C13.0149 22.5436 14.0061 22.1827 14.7559 21.4967C15.5056 20.8106 15.9529 19.8553 15.9996 18.8401V18.5001H19.3596C19.682 18.4983 19.9967 18.4015 20.2644 18.2218C20.5321 18.0421 20.7409 17.7875 20.8647 17.4898C20.9885 17.1921 21.0218 16.8645 20.9604 16.5479C20.899 16.2314 20.7457 15.94 20.5196 15.7101ZM13.9996 18.8401C13.9441 19.3211 13.7052 19.7622 13.3327 20.0714C12.9601 20.3807 12.4826 20.5342 11.9996 20.5001C11.5166 20.5342 11.0391 20.3807 10.6665 20.0714C10.2939 19.7622 10.055 19.3211 9.99958 18.8401V18.5001H13.9996V18.8401ZM5.50958 16.5001L6.68958 15.3201C6.87675 15.1341 7.02525 14.9128 7.12651 14.6691C7.22777 14.4254 7.27979 14.1641 7.27958 13.9001V9.23014C7.28013 8.55554 7.42497 7.88886 7.70438 7.27485C7.98379 6.66083 8.39131 6.11369 8.89958 5.67014C9.401 5.21582 9.99516 4.87589 10.6409 4.67387C11.2867 4.47185 11.9686 4.41257 12.6396 4.50014C13.7961 4.68791 14.8458 5.28715 15.5955 6.18752C16.3452 7.08789 16.7444 8.22878 16.7196 9.40014V13.9001C16.7181 14.1634 16.7685 14.4243 16.868 14.668C16.9676 14.9116 17.1142 15.1333 17.2996 15.3201L18.4896 16.5001H5.50958Z"
-                      fill="#E3E3E3"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_2409_6243">
-                      <rect
-                        width="24"
-                        height="24"
-                        fill="white"
-                        transform="translate(0 0.5)"
-                      />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <span class="absolute top-2 right-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="10"
-                    height="11"
-                    viewBox="0 0 10 11"
-                    fill="none"
-                  >
-                    <circle
-                      cx="5"
-                      cy="5.5"
-                      r="4.5"
-                      fill="#FF576B"
-                      stroke="#F0F0F0"
-                    />
-                  </svg>
-                </span>
-              </div>
-              <div
-                class="flex items-center justify-center h-11 w-11 rounded-full bg-[#FFFFFF0D] relative pointer hover:bg-[#ffffff1e] duration-500"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
+                <g clip-path="url(#clip0_2409_6243)">
                   <path
-                    d="M20.1 9.22091C18.29 9.22091 17.55 7.94091 18.45 6.37091C18.97 5.46091 18.66 4.30091 17.75 3.78091L16.02 2.79091C15.23 2.32091 14.21 2.60091 13.74 3.39091L13.63 3.58091C12.73 5.15091 11.25 5.15091 10.34 3.58091L10.23 3.39091C10.1222 3.20189 9.97789 3.0362 9.80545 2.90348C9.63302 2.77075 9.43591 2.67365 9.2256 2.61781C9.01529 2.56198 8.79597 2.54853 8.58041 2.57825C8.36485 2.60796 8.15736 2.68025 7.97 2.79091L6.24 3.78091C5.33 4.30091 5.02 5.47091 5.54 6.38091C6.45 7.94091 5.71 9.22091 3.9 9.22091C2.86 9.22091 2 10.0709 2 11.1209V12.8809C2 13.9209 2.85 14.7809 3.9 14.7809C5.71 14.7809 6.45 16.0609 5.54 17.6309C5.02 18.5409 5.33 19.7009 6.24 20.2209L7.97 21.2109C8.76 21.6809 9.78 21.4009 10.25 20.6109L10.36 20.4209C11.26 18.8509 12.74 18.8509 13.65 20.4209L13.76 20.6109C14.23 21.4009 15.25 21.6809 16.04 21.2109L17.77 20.2209C18.68 19.7009 18.99 18.5309 18.47 17.6309C17.56 16.0609 18.3 14.7809 20.11 14.7809C21.15 14.7809 22.01 13.9309 22.01 12.8809V11.1209C22.0048 10.6169 21.8015 10.1352 21.4442 9.77968C21.0868 9.42421 20.604 9.22351 20.1 9.22091ZM12 15.2509C10.21 15.2509 8.75 13.7909 8.75 12.0009C8.75 10.2109 10.21 8.75091 12 8.75091C13.79 8.75091 15.25 10.2109 15.25 12.0009C15.25 13.7909 13.79 15.2509 12 15.2509Z"
+                    d="M20.5196 15.7101L18.7196 13.9001V9.44014C18.7435 7.78396 18.1674 6.17505 17.0977 4.91048C16.028 3.6459 14.5368 2.81107 12.8996 2.56014C11.9494 2.43501 10.9834 2.51395 10.0662 2.79171C9.14893 3.06947 8.30146 3.53966 7.58031 4.1709C6.85916 4.80214 6.28093 5.57992 5.88419 6.45233C5.48745 7.32475 5.28133 8.27175 5.27958 9.23014V13.9001L3.47958 15.7101C3.25349 15.94 3.10017 16.2314 3.03879 16.5479C2.9774 16.8645 3.01068 17.1921 3.13446 17.4898C3.25824 17.7875 3.46704 18.0421 3.73474 18.2218C4.00244 18.4015 4.31717 18.4983 4.63958 18.5001H7.99958V18.8401C8.04629 19.8553 8.49354 20.8106 9.24331 21.4967C9.99308 22.1827 10.9842 22.5436 11.9996 22.5001C13.0149 22.5436 14.0061 22.1827 14.7559 21.4967C15.5056 20.8106 15.9529 19.8553 15.9996 18.8401V18.5001H19.3596C19.682 18.4983 19.9967 18.4015 20.2644 18.2218C20.5321 18.0421 20.7409 17.7875 20.8647 17.4898C20.9885 17.1921 21.0218 16.8645 20.9604 16.5479C20.899 16.2314 20.7457 15.94 20.5196 15.7101ZM13.9996 18.8401C13.9441 19.3211 13.7052 19.7622 13.3327 20.0714C12.9601 20.3807 12.4826 20.5342 11.9996 20.5001C11.5166 20.5342 11.0391 20.3807 10.6665 20.0714C10.2939 19.7622 10.055 19.3211 9.99958 18.8401V18.5001H13.9996V18.8401ZM5.50958 16.5001L6.68958 15.3201C6.87675 15.1341 7.02525 14.9128 7.12651 14.6691C7.22777 14.4254 7.27979 14.1641 7.27958 13.9001V9.23014C7.28013 8.55554 7.42497 7.88886 7.70438 7.27485C7.98379 6.66083 8.39131 6.11369 8.89958 5.67014C9.401 5.21582 9.99516 4.87589 10.6409 4.67387C11.2867 4.47185 11.9686 4.41257 12.6396 4.50014C13.7961 4.68791 14.8458 5.28715 15.5955 6.18752C16.3452 7.08789 16.7444 8.22878 16.7196 9.40014V13.9001C16.7181 14.1634 16.7685 14.4243 16.868 14.668C16.9676 14.9116 17.1142 15.1333 17.2996 15.3201L18.4896 16.5001H5.50958Z"
                     fill="#E3E3E3"
                   />
-                </svg>
-              </div>
-              <div
-                class="flex items-center justify-center h-11 w-11 rounded-full bg-[#FFFFFF0D] relative pointer hover:bg-[#ffffff1e] duration-500"
+                </g>
+                <defs>
+                  <clipPath id="clip0_2409_6243">
+                    <rect
+                      width="24"
+                      height="24"
+                      fill="white"
+                      transform="translate(0 0.5)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span class="absolute top-2 right-3"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="11"
+                  viewBox="0 0 10 11"
+                  fill="none"
+                >
+                  <circle
+                    cx="5"
+                    cy="5.5"
+                    r="4.5"
+                    fill="#FF576B"
+                    stroke="#F0F0F0"
+                  /></svg
+              ></span>
+            </div>
+            <div
+              class="flex items-center justify-center h-11 w-11 rounded-full bg-[#FFFFFF0D] relative pointer hover:bg-[#ffffff1e] duration-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
               >
-                <img src="../images/user/user.png" alt="user" />
-              </div>
+                <path
+                  d="M20.1 9.22091C18.29 9.22091 17.55 7.94091 18.45 6.37091C18.97 5.46091 18.66 4.30091 17.75 3.78091L16.02 2.79091C15.23 2.32091 14.21 2.60091 13.74 3.39091L13.63 3.58091C12.73 5.15091 11.25 5.15091 10.34 3.58091L10.23 3.39091C10.1222 3.20189 9.97789 3.0362 9.80545 2.90348C9.63302 2.77075 9.43591 2.67365 9.2256 2.61781C9.01529 2.56198 8.79597 2.54853 8.58041 2.57825C8.36485 2.60796 8.15736 2.68025 7.97 2.79091L6.24 3.78091C5.33 4.30091 5.02 5.47091 5.54 6.38091C6.45 7.94091 5.71 9.22091 3.9 9.22091C2.86 9.22091 2 10.0709 2 11.1209V12.8809C2 13.9209 2.85 14.7809 3.9 14.7809C5.71 14.7809 6.45 16.0609 5.54 17.6309C5.02 18.5409 5.33 19.7009 6.24 20.2209L7.97 21.2109C8.76 21.6809 9.78 21.4009 10.25 20.6109L10.36 20.4209C11.26 18.8509 12.74 18.8509 13.65 20.4209L13.76 20.6109C14.23 21.4009 15.25 21.6809 16.04 21.2109L17.77 20.2209C18.68 19.7009 18.99 18.5309 18.47 17.6309C17.56 16.0609 18.3 14.7809 20.11 14.7809C21.15 14.7809 22.01 13.9309 22.01 12.8809V11.1209C22.0048 10.6169 21.8015 10.1352 21.4442 9.77968C21.0868 9.42421 20.604 9.22351 20.1 9.22091ZM12 15.2509C10.21 15.2509 8.75 13.7909 8.75 12.0009C8.75 10.2109 10.21 8.75091 12 8.75091C13.79 8.75091 15.25 10.2109 15.25 12.0009C15.25 13.7909 13.79 15.2509 12 15.2509Z"
+                  fill="#E3E3E3"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex items-center justify-center h-11 w-11 rounded-full bg-[#FFFFFF0D] relative pointer hover:bg-[#ffffff1e] duration-500"
+            >
+              <img src="../images/user/user.png" alt="user" />
             </div>
           </div>
-        </div>
-        <div class="text-white">
-          <h1 class="text-9xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem possimus eum, consectetur ab, voluptas blanditiis quia repudiandae dolorum a cumque amet nihil illo quaerat aperiam et sapiente enim aspernatur deserunt?</h1>
-          <h1 class="text-9xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem possimus eum, consectetur ab, voluptas blanditiis quia repudiandae dolorum a cumque amet nihil illo quaerat aperiam et sapiente enim aspernatur deserunt?</h1>
-          <h1 class="text-9xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem possimus eum, consectetur ab, voluptas blanditiis quia repudiandae dolorum a cumque amet nihil illo quaerat aperiam et sapiente enim aspernatur deserunt?</h1>
-          <h1 class="text-9xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem possimus eum, consectetur ab, voluptas blanditiis quia repudiandae dolorum a cumque amet nihil illo quaerat aperiam et sapiente enim aspernatur deserunt?</h1>
-          <h1 class="text-9xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem possimus eum, consectetur ab, voluptas blanditiis quia repudiandae dolorum a cumque amet nihil illo quaerat aperiam et sapiente enim aspernatur deserunt?</h1>
-          <h1 class="text-9xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem possimus eum, consectetur ab, voluptas blanditiis quia repudiandae dolorum a cumque amet nihil illo quaerat aperiam et sapiente enim aspernatur deserunt?</h1>
-          <h1 class="text-9xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem possimus eum, consectetur ab, voluptas blanditiis quia repudiandae dolorum a cumque amet nihil illo quaerat aperiam et sapiente enim aspernatur deserunt?</h1>
-          <h1 class="text-9xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem possimus eum, consectetur ab, voluptas blanditiis quia repudiandae dolorum a cumque amet nihil illo quaerat aperiam et sapiente enim aspernatur deserunt?</h1>
-          <h1 class="text-9xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem possimus eum, consectetur ab, voluptas blanditiis quia repudiandae dolorum a cumque amet nihil illo quaerat aperiam et sapiente enim aspernatur deserunt?</h1>
         </div>
       </div>
     </div>
