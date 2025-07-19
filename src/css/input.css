@@ -4,22 +4,22 @@
   body {
     font-family: "Montserrat", sans-serif;
   }
- .before-line-bar {
+  .before-line-bar {
     position: relative;
   }
- .before-line-bar:after {
+  .before-line-bar:after {
     content: "";
     position: absolute;
     left: 0;
-    top:4px;
-    height:42px;
+    top: 4px;
+    height: 42px;
     width: 2px;
     background-color: #fcd331;
     opacity: 0;
   }
-   .active.before-line-bar:after{
+  .active.before-line-bar:after {
     opacity: 1;
-   }
+  }
   .divider {
     display: flex;
     align-items: center;
@@ -83,7 +83,7 @@
     left: 12px !important;
   }
 }
- 
+
 @layer components {
   .container {
     @apply max-w-[1238px] mx-auto px-4;
