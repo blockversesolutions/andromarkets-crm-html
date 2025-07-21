@@ -2,11 +2,22 @@
 
 @layer base {
   body {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
   }
   .before-line-bar {
     position: relative;
   }
+ /* .simplebar-track.simplebar-vertical {
+  right: -24px;
+}
+.simplebar-scrollbar::before {
+  background-color: #ffbe38;
+  width: 8px;
+}
+[data-simplebar] {
+  position: absolute;
+} */
   .before-line-bar:after {
     content: "";
     position: absolute;
@@ -60,6 +71,19 @@
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
   }
+   .custom-pagination .swiper-pagination-bullet {
+    width: 18px !important;
+    height: 10px !important;
+    background-color: #fff !important;
+    opacity:0.6;
+    border-radius: 50px !important;
+    transition: all 0.3s ease;
+  }
+
+  .custom-pagination .swiper-pagination-bullet-active {
+    background-color: #fcd331 !important; 
+    width: 30px !important;
+  }
   .pointer {
     cursor: pointer;
   }
@@ -82,34 +106,53 @@
     right: auto;
     left: 12px !important;
   }
+   .bg-gradient-1{
+    background: linear-gradient(199.5deg, #FDF5E1 4.3%, #FFFFFF 49.5%, #FDF6E3 90.45%);
+  }
+  .gradient-color{
+         background: linear-gradient(89.49deg, #E99E10 34.3%, #FFD27E 49.8%, #E99E10 65.3%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+  }
+  .error-input-field {
+  border-color: #FF3E7080 !important;
+  background-color: #8507280D !important;
+}
 }
 
 @layer components {
   .container {
     @apply max-w-[1238px] mx-auto px-4;
   }
-
+ 
   .heading-sm {
     @apply font-medium text-lg text-white;
   }
   .heading-md {
-    @apply font-semibold text-[22px] text-white leading-[100%];
+    @apply font-semibold text-[24px] text-[#E3E3E3] leading-[100%];
   }
   .label {
     @apply font-medium text-[16px] text-white;
   }
-  .input {
+  .input-2 {
     @apply w-full rounded-[10px] font-medium text-[16px] text-white bg-[#FFFFFF14] py-3 px-5 ps-[52px] mt-3 border border-transparent placeholder:text-[#FFFFFF4D] placeholder:font-normal  focus:border-[1px] focus:border-[#FCD331] focus:outline-none;
   }
+  .input {
+    @apply w-full rounded-[10px] font-medium text-[16px] text-white bg-[#FFFFFF14] py-4.5 px-5 ps-[52px] mt-3 border border-transparent placeholder:text-[#FFFFFF4D] placeholder:font-normal  focus:border-[1px] focus:border-[#FCD331] focus:outline-none;
+  }
+  
   .primary-btn {
-    @apply w-full rounded-[100px] p-3 lg:p-[14px] bg-[#FCD331] text-black font-semibold text-[16px] hover:bg-[#FCD331] duration-500 hover:shadow-[0_20px_25px_0_rgba(204,164,52,0.2)];
+    @apply w-full rounded-[10px] py-4.5 px-3   bg-[#FCD331] text-black font-semibold text-[16px] hover:bg-[#FCD331] duration-500 hover:shadow-[0_20px_25px_0_rgba(204,164,52,0.2)];
   }
   .secondary-btn {
     @apply flex justify-center gap-x-2 rounded-[100px] p-3 lg:p-[14px] bg-[#0000004D] text-[#E0E0E0] font-medium text-[16px] hover:bg-[#2725254d] duration-500;
   }
   .code-inputs input {
-    @apply border rounded-[100px] text-white h-8 w-11 lg:h-11 lg:w-16 bg-transparent mt-4 text-center font-medium text-sm lg:text-xl;
+    @apply border border-[#FFFFFF14] rounded-[10px] text-white h-[56px] w-[75px]   bg-transparent text-center font-medium text-sm lg:text-xl focus-visible:bg-[#FFFFFF14] focus-visible:outline-0;
   }
+ 
   .valid-otp input {
     @apply border-[#4CAF50]  text-[#4CAF50];
   }
