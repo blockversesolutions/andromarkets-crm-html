@@ -4,8 +4,6 @@
   body {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
-    
- 
   }
   .bg-image{
 background: url('../images/bg/authentication-body-bg.png');
@@ -25,6 +23,8 @@ background: url('../images/bg/authentication-body-bg.png');
 [data-simplebar] {
   position: absolute;
 } */
+
+
   .before-line-bar:after {
     content: "";
     position: absolute;
@@ -130,6 +130,12 @@ background: url('../images/bg/authentication-body-bg.png');
 }
 
 @layer components {
+   input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
   .container {
     @apply max-w-[1238px] mx-auto px-4;
   }
