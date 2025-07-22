@@ -4,8 +4,6 @@
   body {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
-    
- 
   }
   .bg-image{
 background: url('../images/bg/authentication-body-bg.png');
@@ -25,6 +23,8 @@ background: url('../images/bg/authentication-body-bg.png');
 [data-simplebar] {
   position: absolute;
 } */
+
+
   .before-line-bar:after {
     content: "";
     position: absolute;
@@ -130,6 +130,12 @@ background: url('../images/bg/authentication-body-bg.png');
 }
 
 @layer components {
+   input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
   .container {
     @apply max-w-[1238px] mx-auto px-4;
   }
@@ -141,17 +147,17 @@ background: url('../images/bg/authentication-body-bg.png');
     @apply font-semibold text-[24px] text-[#E3E3E3] leading-[100%];
   }
   .label {
-    @apply font-medium text-[16px] text-white;
+    @apply font-medium text-[14px] text-white;
   }
   .input-2 {
     @apply w-full rounded-[10px] font-medium text-[16px] text-white bg-[#FFFFFF14] py-3 px-5 ps-[52px] mt-3 border border-transparent placeholder:text-[#FFFFFF4D] placeholder:font-normal  focus:border-[1px] focus:border-[#FCD331] focus:outline-none;
   }
   .input {
-    @apply w-full rounded-[10px] font-medium text-[16px] text-white bg-[#FFFFFF14] py-4.5 px-5 ps-[52px] mt-3 border border-transparent placeholder:text-[#FFFFFF4D] placeholder:font-normal  focus:border-[1px] focus:border-[#FCD331] focus:outline-none;
+    @apply w-full rounded-[10px] font-medium text-[15px] text-white bg-[#FFFFFF14] py-3 px-5 ps-[52px] mt-3 border border-transparent placeholder:text-[#FFFFFF4D] placeholder:font-normal  focus:border-[1px] focus:border-[#FCD331] focus:outline-none;
   }
   
   .primary-btn {
-    @apply  w-full rounded-[10px] py-4.5 px-3   bg-[#FCD331] text-black font-semibold text-[16px] hover:bg-[#FCD331] duration-500 hover:shadow-[0_20px_25px_0_rgba(204,164,52,0.2)];
+    @apply  w-full rounded-[10px] py-3 px-3   bg-[#FCD331] text-black font-semibold text-[16px] hover:bg-[#FCD331] duration-500 hover:shadow-[0_20px_25px_0_rgba(204,164,52,0.2)];
   }
   .secondary-btn {
     @apply flex justify-center gap-x-2 rounded-[100px] p-3 lg:p-[14px] bg-[#0000004D] text-[#E0E0E0] font-medium text-[16px] hover:bg-[#2725254d] duration-500;
