@@ -20,7 +20,7 @@
     <link href="../css/output.css" rel="stylesheet" />
   </head>
   <body class="bg-[#080500]">
-    <div class="flex justify-center flex-col  bg-image">
+    <div class="flex justify-center flex-col bg-image">
       <div class="w-full md:max-w-[1240px] mx-auto py-14 px-6">
         <div class="grid grid-cols-12 gap-8">
           <div
@@ -28,7 +28,6 @@
           >
             <div class="authentication">
               <div class="authentication-header text-center">
-                 
                 <h4 class="heading-md">Create An Account</h4>
                 <p class="text-[#E3E3E3B3] mt-2 text-sm">
                   Please inter your details & start with us.
@@ -38,17 +37,37 @@
                 <form action="">
                   <div class="flex flex-col space-y-6">
                     <!-- item -->
-                    <div class="flex items-center gap-3">
+                    <div class="grid grid-cols-2 gap-3">
                       <!-- inner item -->
-                      <div>
+                      <div class="col-span-1">
                         <label for="First_name" class="label">First Name</label>
 
                         <div class="relative flex items-center">
-                          <span class="absolute left-4 top-[30px]">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M17 8.5C17 5.73858 14.7614 3.5 12 3.5C9.23858 3.5 7 5.73858 7 8.5C7 11.2614 9.23858 13.5 12 13.5C14.7614 13.5 17 11.2614 17 8.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M19 20.5C19 16.634 15.866 13.5 12 13.5C8.13401 13.5 5 16.634 5 20.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
+                          <span
+                            class="absolute left-4 top-1/2 -translate-y-1/2"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M17 8.5C17 5.73858 14.7614 3.5 12 3.5C9.23858 3.5 7 5.73858 7 8.5C7 11.2614 9.23858 13.5 12 13.5C14.7614 13.5 17 11.2614 17 8.5Z"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M19 20.5C19 16.634 15.866 13.5 12 13.5C8.13401 13.5 5 16.634 5 20.5"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
                           </span>
                           <!-- toggle class error-input-field -->
                           <input
@@ -76,18 +95,37 @@
                           </svg>
                           Looks good!
                         </p>
-                        
                       </div>
                       <!-- inner item -->
-                      <div>
+                      <div class="col-span-1">
                         <label for="Last_name" class="label">Last Name</label>
 
                         <div class="relative flex items-center">
-                          <span class="absolute left-4 top-[30px]">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M17 8.5C17 5.73858 14.7614 3.5 12 3.5C9.23858 3.5 7 5.73858 7 8.5C7 11.2614 9.23858 13.5 12 13.5C14.7614 13.5 17 11.2614 17 8.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M19 20.5C19 16.634 15.866 13.5 12 13.5C8.13401 13.5 5 16.634 5 20.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
+                          <span
+                            class="absolute left-4 top-1/2 -translate-y-1/2"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M17 8.5C17 5.73858 14.7614 3.5 12 3.5C9.23858 3.5 7 5.73858 7 8.5C7 11.2614 9.23858 13.5 12 13.5C14.7614 13.5 17 11.2614 17 8.5Z"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M19 20.5C19 16.634 15.866 13.5 12 13.5C8.13401 13.5 5 16.634 5 20.5"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
                           </span>
                           <!-- toggle class error-input-field -->
                           <input
@@ -115,7 +153,6 @@
                           </svg>
                           Looks good!
                         </p>
-                         
                       </div>
                     </div>
                     <!-- item -->
@@ -123,7 +160,7 @@
                       <label for="Email" class="label">Email Address</label>
 
                       <div class="relative flex items-center">
-                        <span class="absolute left-4 top-[30px]">
+                        <span class="absolute left-4 top-1/2 -translate-y-1/2">
                           <svg
                             width="25"
                             height="24"
@@ -211,7 +248,7 @@
                     <div>
                       <label for="pasword" class="label">Password</label>
                       <div class="relative flex items-center">
-                        <span class="absolute left-4 top-[30px]">
+                        <span class="absolute left-4 top-1/2 -translate-y-1/2">
                           <svg
                             width="25"
                             height="24"
@@ -262,7 +299,7 @@
                           placeholder="Enter your password"
                           class="input ps-14"
                         />
-                        <span class="absolute right-3 top-[44px]">
+                        <span class="absolute right-3 top-1/2 -translate-y-1/2">
                           <!-- Eye Toggle -->
                           <button
                             type="button"
@@ -326,13 +363,12 @@
                         </svg>
                         Looks good!
                       </p>
-                      
                     </div>
                     <!-- item -->
                     <div>
                       <label for="re-pasword" class="label">Re-Password</label>
                       <div class="relative flex items-center">
-                        <span class="absolute left-4 top-[30px]">
+                        <span class="absolute left-4 top-1/2 -translate-y-1/2">
                           <svg
                             width="25"
                             height="24"
@@ -383,7 +419,9 @@
                           placeholder="Enter your password"
                           class="input ps-14"
                         />
-                        <span class="absolute right-3 top-[44px]">
+                        <span
+                          class="absolute right-3 top-1/2 -translate-y-1/2]"
+                        >
                           <!-- Eye Toggle -->
                           <button
                             type="button"
@@ -482,20 +520,34 @@
                         Must match the new password.
                       </p>
                     </div>
-                     
+
                     <!-- item -->
                     <button class="primary-btn pointer" type="submit">
                       Continue
                     </button>
-                    
+
                     <!-- item -->
 
-                    <a href="#" class="primary-btn bg-[#FFFFFF1A] text-white flex items-center gap-2.5 justify-center">
-                       <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-  <path d="M1.793 11.2934L8.793 4.29341C8.9816 4.11125 9.2342 4.01045 9.4964 4.01273C9.7586 4.01501 10.0094 4.12018 10.1948 4.30559C10.3802 4.491 10.4854 4.74181 10.4877 5.00401C10.49 5.2662 10.3892 5.5188 10.207 5.70741L4.914 11.0004H22.5C22.7652 11.0004 23.0196 11.1058 23.2071 11.2933C23.3946 11.4808 23.5 11.7352 23.5 12.0004C23.5 12.2656 23.3946 12.52 23.2071 12.7075C23.0196 12.8951 22.7652 13.0004 22.5 13.0004H4.914L10.207 18.2934C10.3025 18.3857 10.3787 18.496 10.4311 18.618C10.4835 18.74 10.5111 18.8712 10.5123 19.004C10.5134 19.1368 10.4881 19.2685 10.4378 19.3914C10.3875 19.5143 10.3133 19.6259 10.2194 19.7198C10.1255 19.8137 10.0139 19.8879 9.89095 19.9382C9.76806 19.9885 9.63638 20.0138 9.5036 20.0127C9.37082 20.0115 9.2396 19.9839 9.1176 19.9315C8.99559 19.8791 8.88525 19.8029 8.793 19.7074L1.793 12.7074C1.60553 12.5199 1.50021 12.2656 1.50021 12.0004C1.50021 11.7352 1.60553 11.4809 1.793 11.2934Z" fill="white"/>
-</svg></span>
-                      Back</a
+                    <a
+                      href="#"
+                      class="primary-btn bg-[#FFFFFF1A] text-white flex items-center gap-2.5 justify-center"
                     >
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="24"
+                          viewBox="0 0 25 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M1.793 11.2934L8.793 4.29341C8.9816 4.11125 9.2342 4.01045 9.4964 4.01273C9.7586 4.01501 10.0094 4.12018 10.1948 4.30559C10.3802 4.491 10.4854 4.74181 10.4877 5.00401C10.49 5.2662 10.3892 5.5188 10.207 5.70741L4.914 11.0004H22.5C22.7652 11.0004 23.0196 11.1058 23.2071 11.2933C23.3946 11.4808 23.5 11.7352 23.5 12.0004C23.5 12.2656 23.3946 12.52 23.2071 12.7075C23.0196 12.8951 22.7652 13.0004 22.5 13.0004H4.914L10.207 18.2934C10.3025 18.3857 10.3787 18.496 10.4311 18.618C10.4835 18.74 10.5111 18.8712 10.5123 19.004C10.5134 19.1368 10.4881 19.2685 10.4378 19.3914C10.3875 19.5143 10.3133 19.6259 10.2194 19.7198C10.1255 19.8137 10.0139 19.8879 9.89095 19.9382C9.76806 19.9885 9.63638 20.0138 9.5036 20.0127C9.37082 20.0115 9.2396 19.9839 9.1176 19.9315C8.99559 19.8791 8.88525 19.8029 8.793 19.7074L1.793 12.7074C1.60553 12.5199 1.50021 12.2656 1.50021 12.0004C1.50021 11.7352 1.60553 11.4809 1.793 11.2934Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </span>
+                      Back
+                    </a>
                   </div>
                 </form>
               </div>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Next Level ECN STP Broker - AndroMarkets</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- swiper slider css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="../css/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-[#080500] flex flex-col gap-4">
+    <!-- start input item -->
+    <div class="relative flex items-center">
+      <span class="absolute left-4 top-1/2 -translate-y-1/2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M17 8.5C17 5.73858 14.7614 3.5 12 3.5C9.23858 3.5 7 5.73858 7 8.5C7 11.2614 9.23858 13.5 12 13.5C14.7614 13.5 17 11.2614 17 8.5Z"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M19 20.5C19 16.634 15.866 13.5 12 13.5C8.13401 13.5 5 16.634 5 20.5"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </span>
+
+      <input
+        type="text"
+        id="First_name"
+        placeholder="Enter your first name"
+        class="input ps-14"
+      />
+    </div>
+    <!-- end input item -->
+    <!-- start error input item -->
+    <div class="relative flex items-center">
+      <span class="absolute left-4 top-1/2 -translate-y-1/2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M17 8.5C17 5.73858 14.7614 3.5 12 3.5C9.23858 3.5 7 5.73858 7 8.5C7 11.2614 9.23858 13.5 12 13.5C14.7614 13.5 17 11.2614 17 8.5Z"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M19 20.5C19 16.634 15.866 13.5 12 13.5C8.13401 13.5 5 16.634 5 20.5"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </span>
+
+      <input
+        type="text"
+        id="First_name"
+        placeholder="Enter your first name"
+        class="input ps-14 error-input-field"
+      />
+    </div>
+    <!-- end error input item -->
+    <!-- start without icon input item -->
+    <div class="relative flex items-center">
+      <input
+        type="text"
+        id="First_name"
+        placeholder="Enter your first name"
+        class="input ps-6"
+      />
+    </div>
+    <!-- end without icon input item -->
+    <!-- start two col -->
+
+    <div class="grid grid-cols-2 gap-3">
+      <!-- inner item -->
+      <div class="lg:col-span-1 col-span-2">
+        <label for="First_name" class="label">First Name</label>
+
+        <div class="relative flex items-center">
+          <span class="absolute left-4 top-1/2 -translate-y-1/2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M17 8.5C17 5.73858 14.7614 3.5 12 3.5C9.23858 3.5 7 5.73858 7 8.5C7 11.2614 9.23858 13.5 12 13.5C14.7614 13.5 17 11.2614 17 8.5Z"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M19 20.5C19 16.634 15.866 13.5 12 13.5C8.13401 13.5 5 16.634 5 20.5"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <!-- toggle class error-input-field -->
+          <input
+            type="text"
+            id="First_name"
+            placeholder="Enter your first name"
+            class="input ps-14"
+          />
+        </div>
+      </div>
+      <!-- inner item -->
+      <div class="lg:col-span-1 col-span-2">
+        <label for="Last_name" class="label">Last Name</label>
+
+        <div class="relative flex items-center">
+          <span class="absolute left-4 top-1/2 -translate-y-1/2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M17 8.5C17 5.73858 14.7614 3.5 12 3.5C9.23858 3.5 7 5.73858 7 8.5C7 11.2614 9.23858 13.5 12 13.5C14.7614 13.5 17 11.2614 17 8.5Z"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M19 20.5C19 16.634 15.866 13.5 12 13.5C8.13401 13.5 5 16.634 5 20.5"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <!-- toggle class error-input-field -->
+          <input
+            type="text"
+            id="Last_name"
+            placeholder="Enter your last name"
+            class="input ps-14 error-input-field"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- end two col -->
+    <!-- Error Message -->
+    <p class="mt-3 text-sm text-[#FF3E70] flex items-center gap-1">
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_6012_1906)">
+          <path
+            d="M7.99935 0.666992C3.94588 0.666992 0.666016 3.94714 0.666016 8.00033C0.666016 12.0538 3.94616 15.3337 7.99935 15.3337C12.0528 15.3337 15.3327 12.0535 15.3327 8.00033C15.3327 3.94685 12.0525 0.666992 7.99935 0.666992ZM7.99935 14.1878C4.57924 14.1878 1.81185 11.4202 1.81185 8.00033C1.81185 4.58021 4.57947 1.81283 7.99935 1.81283C11.4195 1.81283 14.1868 4.58044 14.1868 8.00033C14.1868 11.4204 11.4192 14.1878 7.99935 14.1878Z"
+            fill="#FF3E70"
+          />
+          <path
+            d="M8 4.02734C7.65481 4.02734 7.375 4.30716 7.375 4.65234V8.67713C7.375 9.02231 7.65481 9.30213 8 9.30213C8.34519 9.30213 8.625 9.02231 8.625 8.67713V4.65234C8.625 4.30716 8.34519 4.02734 8 4.02734Z"
+            fill="#FF3E70"
+          />
+          <path
+            d="M8 11.7549C8.46599 11.7549 8.84375 11.3771 8.84375 10.9111C8.84375 10.4451 8.46599 10.0674 8 10.0674C7.53401 10.0674 7.15625 10.4451 7.15625 10.9111C7.15625 11.3771 7.53401 11.7549 8 11.7549Z"
+            fill="#FF3E70"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_6012_1906">
+            <rect width="16" height="16" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      Please enter a valid email address.
+    </p>
+    <!-- success Message -->
+    <p class="mt-3 text-sm text-[#58D58D] flex items-center gap-1">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="12"
+        viewBox="0 0 16 12"
+        fill="none"
+      >
+        <path
+          d="M14.9919 1.06432C14.5381 0.609927 13.8012 0.610214 13.3468 1.06432L5.94289 8.46854L2.65216 5.17784C2.19777 4.72345 1.4612 4.72345 1.00681 5.17784C0.552417 5.63223 0.552417 6.3688 1.00681 6.82319L5.12004 10.9364C5.3471 11.1635 5.64482 11.2773 5.94257 11.2773C6.24033 11.2773 6.53834 11.1638 6.76539 10.9364L14.9919 2.70964C15.4463 2.25556 15.4463 1.51869 14.9919 1.06432Z"
+          fill="#58D58D"
+        />
+      </svg>
+      Looks good!
+    </p>
+    
+    <div>
+  <label for="file_input" class="label">Upload file</label>
+  <input
+    id="file_input"
+    type="file"
+    class="file"
+  /> 
+</div>
+
+<fieldset>
+  <legend class="text-sm font-medium text-gray-900 mb-2">Choose a plan</legend>
+  <div class="space-y-2">
+    <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:border-yellow-400">
+      <input type="radio" name="plan" value="basic" class="hidden peer" checked />
+      <div
+        class="w-5 h-5 rounded-full border border-gray-400 flex items-center justify-center peer-checked:border-yellow-400 peer-checked:ring-2 peer-checked:ring-yellow-300">
+        <div class="w-2.5 h-2.5 bg-yellow-400 rounded-full scale-0 peer-checked:scale-100 transition-transform"></div>
+      </div>
+      <span class="text-gray-800">Basic Plan</span>
+    </label>
+
+    <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:border-yellow-400">
+      <input type="radio" name="plan" value="premium" class="hidden peer" />
+      <div
+        class="w-5 h-5 rounded-full border border-gray-400 flex items-center justify-center peer-checked:border-yellow-400 peer-checked:ring-2 peer-checked:ring-yellow-300">
+        <div class="w-2.5 h-2.5 bg-yellow-400 rounded-full scale-0 peer-checked:scale-100 transition-transform"></div>
+      </div>
+      <span class="text-gray-800">Premium Plan</span>
+    </label>
+  </div>
+</fieldset>
+
+    <!-- Button to open modal -->
+    <button data-modal-target="modal-1" class="primary-btn-sm">
+      Open Modal 1
+    </button>
+    <!-- Modal -->
+    <div
+      id="modal-1"
+      class="modal fixed w-full inset-0 backdrop-blur-md flex items-center justify-center z-50 opacity-0 pointer-events-none transition-opacity duration-300"
+    >
+      <div
+        class="modal-content bg-white p-6 rounded-lg transform scale-95 transition-all duration-300"
+      >
+        <div class="relative">
+          <h2 class="text-xl font-bold mb-4">Animated Modal 1</h2>
+          <span
+            data-close-modal
+            class="h-9 w-9 rounded-full flex items-center justify-center p-1 border border-amber-500 bg-[#FCD331] absolute -top-9 -right-9 pointer-coarse:"
+            >></span
+          >
+        </div>
+        <div>
+          <p>This modal fades and zooms in!</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            possimus, officia, maiores aliquam itaque modi iusto neque
+            recusandae aut non laboriosam magni eveniet, omnis obcaecati qui ut
+            ipsam animi perspiciatis.
+          </p>
+        </div>
+
+        <div>
+          <button data-close-modal class="mt-4 primary-btn-xsm">Close</button>
+        </div>
+      </div>
+    </div>
+ 
+
+    <!-- Button  -->
+
+    <div class="inline-block">
+      <button class="primary-btn" type="submit">Verify Code</button>
+    </div>
+
+    <button class="primary-btn" type="submit">Verify Code</button>
+    <div class="inline-block">
+      <button class="primary-btn-md" type="submit">Verify Code</button>
+    </div>
+
+    <button class="primary-btn-md" type="submit">Verify Code</button>
+    <div class="inline-block">
+      <button class="primary-btn-sm" type="submit">Verify Code</button>
+    </div>
+    <div class="inline-block">
+      <a href="#" class="primary-btn-sm">Link Add</a>
+    </div>
+    <div class="inline-block">
+      <a href="#" class="primary-btn-xsm">Link Add</a>
+    </div>
+    <div class="inline-block">
+      <span class="badge">Normal Badge</span>
+    </div>
+    <div class="inline-block">
+      <span class="badge badge-complete">Complete</span>
+    </div>
+    <div class="inline-block">
+      <span class="badge badge-pending">Pending</span>
+    </div>
+    <div class="inline-block">
+      <span class="badge badge-reject">Reject</span>
+    </div>
+    <div class="flex items-center">
+      <input type="checkbox" id="Remember" class="hidden" />
+      <label
+        for="Remember"
+        class="text-gray-300 checkbox-label relative pointer hover:text-[#FCD331] transition-colors duration-200"
+      >
+        Remember me
+      </label>
+    </div>
+
+    <label class="inline-flex items-center cursor-pointer">
+      <input type="checkbox" value="" class="sr-only peer" />
+      <div class="toggle"></div>
+      <span class="ms-3 text-sm font-medium text-white">Toggle me</span>
+    </label>
+
+    <!-- Start modal code  -->
+    <script>
+      const showModal = (modal) => {
+        modal.classList.remove("opacity-0", "pointer-events-none");
+        setTimeout(
+          () =>
+            modal
+              .querySelector(".modal-content")
+              ?.classList.replace("scale-95", "scale-100"),
+          10
+        );
+      };
+
+      const hideModal = (modal) => {
+        modal
+          .querySelector(".modal-content")
+          ?.classList.replace("scale-100", "scale-95");
+        modal.classList.add("opacity-0", "pointer-events-none");
+      };
+
+      document.querySelectorAll("[data-modal-target]").forEach((btn) =>
+        btn.addEventListener("click", () => {
+          const modal = document.getElementById(btn.dataset.modalTarget);
+          if (modal) showModal(modal);
+        })
+      );
+
+      document
+        .querySelectorAll("[data-close-modal]")
+        .forEach((btn) =>
+          btn.addEventListener("click", () => hideModal(btn.closest(".modal")))
+        );
+
+      document.querySelectorAll(".modal").forEach((modal) =>
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) hideModal(modal);
+        })
+      );
+    </script>
+
+    <!-- End modal code  -->
+    <!-- Password Show / Hide -->
+    <script>
+      document.querySelectorAll("[data-toggle]").forEach((toggleBtn) => {
+        toggleBtn.addEventListener("click", () => {
+          const wrapper = toggleBtn.closest("div");
+          const passwordInput = wrapper.querySelector("[data-password]");
+          const eyeOpen = toggleBtn.querySelector("[data-eye-open]");
+          const eyeClosed = toggleBtn.querySelector("[data-eye-closed]");
+
+          const type = passwordInput.type === "password" ? "text" : "password";
+          passwordInput.type = type;
+
+          eyeOpen.classList.toggle("hidden");
+          eyeClosed.classList.toggle("hidden");
+        });
+      });
+    </script>
+    <!-- Initialize Swiper -->
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".custom-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+    <script>
+      const get_otp_input = document.querySelectorAll(".code-inputs input");
+
+      get_otp_input.forEach((input, index) => {
+        input.addEventListener("input", () => {
+          if (input.value.length === 1 && index < get_otp_input.length - 1) {
+            get_otp_input[index + 1].focus();
+          }
+        });
+      });
+      function submitCode(event) {
+        event.preventDefault();
+        let code = "";
+        get_otp_input.forEach((input) => {
+          code += input.value;
+        });
+        console.log("Collected Code:", code);
+        if (code.length === 6) {
+          console.log("Final Code:", code);
+        } else {
+          alert("Please enter all 6 digits.");
+        }
+      }
+    </script>
+  </body>
+</html>
