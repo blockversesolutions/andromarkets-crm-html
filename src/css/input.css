@@ -1,13 +1,49 @@
 @import "tailwindcss";
 
 @layer base {
-  
+  /* #sidebar:hover{
+    width: 335px !important;
+  }
+  #sidebar:hover .nav-label{
+    display: block !important;
+ 
+  } */
+    /* #sidebar:hover .nav-label{
+    display: block !important;
+ 
+  } */
+  #sidebar,.nav-label{
+    transition: 2s;
+  }
+  .before-line-bar svg{
+    width: 40px !important;
+  }
+ 
   body {
     /* font-family: "Poppins", sans-serif; */
     font-size: 16px;
      font-family: "Montserrat", sans-serif;
      
   }
+  .nav-label-inner-after.active a{
+    color: #fcd331;
+  }
+  .nav-label-inner-after.active a span{
+    background-color: #fcd331 !important;
+  }
+ .nav-label-inner-after:after {
+    content: "";
+    height: 38px;
+    width: 2px;
+    background-color: #FFFFFF4D;
+    position: absolute;
+    left: 3px;
+    z-index: -2;
+    top: 15px;
+}
+.dropdown-menu ul li:last-child.nav-label-inner-after:after{
+  display: none;
+}
   input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
   box-shadow: 0 0 0px 1000px transparent inset !important;
@@ -203,5 +239,14 @@ background: url('../images/bg/authentication-body-bg.png');
   .toggle{
     @apply relative w-11 h-6 bg-gray-200   rounded-full   peer-checked:after:translate-x-full  after:absolute after:top-[2px] after:start-[2px] after:bg-[#FCD331] after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#382B0A];
   }
+
+  .nav-label{
+    @apply text-[#E3E3E3] font-medium text-[16px] transition duration-500  whitespace-nowrap group-hover:text-[#FCD331] group-[.active]:text-[#FCD331]  
+  }
+  .nav-label-inner{
+    @apply flex items-center text-[#aaa8a8] font-medium text-[15px] hover:text-[#FCD331] transition duration-500 relative
+  }
+
+
 }
  
