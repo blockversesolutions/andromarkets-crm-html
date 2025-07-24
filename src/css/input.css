@@ -1,17 +1,7 @@
 @import "tailwindcss";
 
 @layer base {
-  /* #sidebar:hover{
-    width: 335px !important;
-  }
-  #sidebar:hover .nav-label{
-    display: block !important;
  
-  } */
-  /* #sidebar:hover .nav-label{
-    display: block !important;
- 
-  } */
   #sidebar,
   .nav-label {
     transition: 2s;
@@ -183,12 +173,10 @@
     background-color: #8507280d !important;
   }
 }
-
 @layer components {
   .container {
     @apply max-w-[1238px] mx-auto px-4;
   }
-
   .heading-sm {
     @apply font-medium text-lg text-white;
   }
