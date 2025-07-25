@@ -41,7 +41,7 @@
         <!-- Sidebar -->
         <div
           id="sidebar"
-          class="fixed z-50 w-[335px] bg-[#140D04] transition-all duration-300 hover:w-[335px]"
+          class="relative w-[335px] bg-[#140D04] transition-all duration-300 hover:w-[335px]"
         >
           <!-- Circle Effect -->
           <div
@@ -59,30 +59,12 @@
                 class="hidden"
                 alt="Short Logo"
               />
-              <div id="long-logo">
-                <img src="../images/logo.png" alt="Long Logo" />
-                <button
-                  onclick="toggleSidebar()"
-                  id="sidebarToggleBtn"
-                  class="xl:hidden flex justify-center items-center absolute -right-4.5 top-[75px] text-white p-2 h-10 w-10 rounded-full bg-[#44350C] cursor-pointer border border-transparent hover:border-[#30230A] hover:bg-[#29251b] duration-500"
-                >
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17 1L1 17M1 1L17 17"
-                      stroke="#ECF6FF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
+              <img
+                id="long-logo"
+                src="../images/logo.png"
+                class=""
+                alt="Long Logo"
+              />
             </div>
 
             <div class="max-h-[calc(100vh-300px)] overflow-auto" data-simplebar>
@@ -210,7 +192,9 @@
                   >
                 </li>
                 <!-- Dropdown item -->
-                <li class="border-b border-[#FFFFFF17] group before-line-bar">
+                <li
+                  class="border-b border-[#FFFFFF17] group before-line-bar"
+                >
                   <button
                     class="flex items-center justify-between pointer w-full py-3 px-2 dropdown-toggle gap-0.5"
                   >
@@ -831,113 +815,153 @@
     <!-- Scroll Bar -->
     <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
     <script>
-      let sidebarOpen = true;
-      let hoverInTimeout, hoverOutTimeout;
+  let sidebarOpen = true; // true means sidebar is expanded
+  let hoverInTimeout, hoverOutTimeout;
 
-      const sidebar = document.getElementById("sidebar");
-      const mainContent = document.getElementById("mainContent");
-      const icon = document.getElementById("toggleIcon");
-      const shortLogo = document.getElementById("short-logo");
-      const longLogo = document.getElementById("long-logo");
-      const bottomArea = document.querySelector(".sidebar-bottom-area");
-      const labelElements = document.querySelectorAll(
-        ".nav-label, .sub-menu-item"
-      );
+  const sidebar = document.getElementById("sidebar");
+  const mainContent = document.getElementById("mainContent");
+  const icon = document.getElementById("toggleIcon");
+  const shortLogo = document.getElementById("short-logo");
+  const longLogo = document.getElementById("long-logo");
+  const bottomArea = document.querySelector(".sidebar-bottom-area");
 
-      let openDropdownIndex = null;
+  const labelElements = document.querySelectorAll(".nav-label, .sub-menu-item");
 
-      function isSmallScreen() {
-        return window.innerWidth <= 1285;
-      }
+  // Store open dropdown index
+  let openDropdownIndex = null;
 
-      function showLabels() {
-        labelElements.forEach((label) => {
-          label.classList.remove("hidden");
-          label.classList.add("block");
-        });
-      }
+  // To track if we are in small screen mode (≤1150px)
+  let isSmallScreen = false;
 
-      function hideLabels() {
-        labelElements.forEach((label) => {
-          label.classList.add("hidden");
-          label.classList.remove("block");
-        });
-      }
+  function showLabels() {
+    labelElements.forEach((label) => {
+      label.classList.remove("hidden");
+      label.classList.add("block");
+    });
+  }
 
-      function showLogo(isLong) {
-        if (shortLogo && longLogo) {
-          shortLogo.classList.toggle("hidden", isLong);
-          longLogo.classList.toggle("hidden", !isLong);
-        }
-      }
+  function hideLabels() {
+    labelElements.forEach((label) => {
+      label.classList.add("hidden");
+      label.classList.remove("block");
+    });
+  }
 
-      function toggleBottomArea(isVisible) {
-        if (bottomArea) {
-          bottomArea.classList.toggle("hidden", !isVisible);
-        }
-      }
+  function showLogo(isLong) {
+    if (shortLogo && longLogo) {
+      shortLogo.classList.toggle("hidden", isLong);
+      longLogo.classList.toggle("hidden", !isLong);
+    }
+  }
 
-      function openDropdown(index) {
-        document.querySelectorAll(".dropdown-menu").forEach((dropdown, i) => {
-          const icon = dropdown.closest("li").querySelector(".dropdown-icon");
-          if (i === index) {
-            dropdown.classList.remove("max-h-0");
-            dropdown.classList.add("max-h-[500px]");
-            icon?.classList.add("rotate-180");
-          } else {
-            dropdown.classList.remove("max-h-[500px]");
-            dropdown.classList.add("max-h-0");
-            icon?.classList.remove("rotate-180");
-          }
-        });
-        openDropdownIndex = index;
-      }
+  function toggleBottomArea(isVisible) {
+    if (bottomArea) {
+      bottomArea.classList.toggle("hidden", !isVisible);
+    }
+  }
 
-      function closeAllDropdowns() {
-        document.querySelectorAll(".dropdown-menu").forEach((dropdown) => {
-          dropdown.classList.remove("max-h-[500px]");
-          dropdown.classList.add("max-h-0");
-        });
-        document.querySelectorAll(".dropdown-icon").forEach((icon) => {
-          icon.classList.remove("rotate-180");
-        });
-      }
-
-      function setSidebarSmall() {
-        sidebar.classList.remove("w-[335px]");
-        sidebar.classList.add("w-[80px]");
-        sidebar.classList.remove("fixed", "z-50"); // remove overlay mode
-
-        if (!isSmallScreen()) {
-          mainContent?.classList.remove("ml-[335px]");
-        }
-
+  function openDropdown(index) {
+    document.querySelectorAll(".dropdown-menu").forEach((dropdown, i) => {
+      const icon = dropdown.closest("li").querySelector(".dropdown-icon");
+      if (i === index) {
+        dropdown.classList.remove("max-h-0");
+        dropdown.classList.add("max-h-[500px]");
         icon?.classList.add("rotate-180");
-
-        hideLabels();
-        showLogo(false);
-        toggleBottomArea(false);
-        closeAllDropdowns();
-
-        sidebarOpen = false;
-      }
-
-      function setSidebarBig() {
-        sidebar.classList.remove("w-[80px]");
-        sidebar.classList.add("w-[335px]");
-
-        if (isSmallScreen()) {
-          //  overlay mode
-          sidebar.classList.add("fixed", "z-50");
-          mainContent?.classList.remove("ml-[335px]");
-        } else {
-          //  desktop push
-          sidebar.classList.remove("fixed", "z-50");
-          mainContent?.classList.add("ml-[0px]");
-        }
-
+      } else {
+        dropdown.classList.remove("max-h-[500px]");
+        dropdown.classList.add("max-h-0");
         icon?.classList.remove("rotate-180");
+      }
+    });
+    openDropdownIndex = index;
+  }
 
+  function closeAllDropdowns() {
+    document.querySelectorAll(".dropdown-menu").forEach((dropdown) => {
+      dropdown.classList.remove("max-h-[500px]");
+      dropdown.classList.add("max-h-0");
+    });
+    document.querySelectorAll(".dropdown-icon").forEach((icon) => {
+      icon.classList.remove("rotate-180");
+    });
+  }
+
+  // Function to set sidebar to small (collapsed)
+  function setSidebarSmall() {
+    sidebar.classList.remove("w-[335px]");
+    sidebar.classList.add("w-[80px]");
+    mainContent?.classList.remove("ml-[335px]");
+    icon?.classList.add("rotate-180");
+
+    hideLabels();
+    showLogo(false);
+    toggleBottomArea(false);
+    closeAllDropdowns();
+
+    sidebarOpen = false;
+  }
+
+  // Function to set sidebar to big (expanded)
+  function setSidebarBig() {
+    sidebar.classList.remove("w-[80px]");
+    sidebar.classList.add("w-[335px]");
+    mainContent?.classList.add("ml-[0px]");
+    icon?.classList.remove("rotate-180");
+
+    showLabels();
+    showLogo(true);
+    toggleBottomArea(true);
+
+    if (openDropdownIndex !== null) {
+      openDropdown(openDropdownIndex);
+    }
+
+    sidebarOpen = true;
+  }
+
+  // Toggle sidebar based on current state
+  function toggleSidebar() {
+    clearTimeout(hoverInTimeout);
+    clearTimeout(hoverOutTimeout);
+
+    if (sidebarOpen) {
+      setSidebarSmall();
+    } else {
+      setSidebarBig();
+    }
+  }
+
+  // Initialize sidebar based on screen size
+  function initSidebar() {
+    const width = window.innerWidth;
+    isSmallScreen = width <= 1150;
+
+    if (isSmallScreen) {
+      // Small screen => default collapsed
+      setSidebarSmall();
+    } else {
+      // Large screen => default expanded
+      setSidebarBig();
+    }
+  }
+
+  // Listen to window resize to update sidebar mode
+  window.addEventListener("resize", () => {
+    const prevSmallScreen = isSmallScreen;
+    const width = window.innerWidth;
+    isSmallScreen = width <= 1150;
+
+    // Only re-init if screen mode changes
+    if (isSmallScreen !== prevSmallScreen) {
+      initSidebar();
+    }
+  });
+
+  // Sidebar hover behavior only when sidebar is collapsed (small) on large screens
+  sidebar.addEventListener("mouseenter", () => {
+    if (!sidebarOpen && !isSmallScreen) {
+      clearTimeout(hoverOutTimeout);
+      hoverInTimeout = setTimeout(() => {
         showLabels();
         showLogo(true);
         toggleBottomArea(true);
@@ -945,107 +969,59 @@
         if (openDropdownIndex !== null) {
           openDropdown(openDropdownIndex);
         }
+      }, 100);
+    }
+  });
 
-        sidebarOpen = true;
+  sidebar.addEventListener("mouseleave", () => {
+    if (!sidebarOpen && !isSmallScreen) {
+      clearTimeout(hoverInTimeout);
+      hoverOutTimeout = setTimeout(() => {
+        hideLabels();
+        showLogo(false);
+        toggleBottomArea(false);
+        closeAllDropdowns();
+      }, 100);
+    }
+  });
+
+  // Dropdown toggle by click (one open at a time)
+  document.querySelectorAll(".dropdown-toggle").forEach((button, index) => {
+    const parentLi = button.closest("li");
+    const dropdown = parentLi.querySelector(".dropdown-menu");
+    const icon = parentLi.querySelector(".dropdown-icon");
+
+    // Auto open if .active
+    if (parentLi.classList.contains("active") && dropdown) {
+      dropdown.classList.remove("max-h-0");
+      dropdown.classList.add("max-h-[500px]");
+      if (icon) icon.classList.add("rotate-180");
+      openDropdownIndex = index;
+    }
+
+    button.addEventListener("click", function () {
+      const isOpen = dropdown.classList.contains("max-h-[500px]");
+
+      closeAllDropdowns();
+
+      if (!isOpen) {
+        dropdown.classList.remove("max-h-0");
+        dropdown.classList.add("max-h-[500px]");
+        if (icon) icon.classList.add("rotate-180");
+        openDropdownIndex = index;
+      } else {
+        if (icon) icon.classList.remove("rotate-180");
+        openDropdownIndex = null;
       }
+    });
+  });
 
-      function toggleSidebar() {
-        clearTimeout(hoverInTimeout);
-        clearTimeout(hoverOutTimeout);
+  // Initial call on page load
+  initSidebar();
 
-        if (sidebarOpen) {
-          setSidebarSmall();
-        } else {
-          setSidebarBig();
-        }
-      }
-
-      function initSidebar() {
-        if (isSmallScreen()) {
-          setSidebarSmall(); // responsive: collapsed + overlay hidden
-        } else {
-          setSidebarBig(); // desktop: expanded with push
-        }
-      }
-
-      window.addEventListener("resize", () => {
-        initSidebar();
-      });
-
-      sidebar.addEventListener("mouseenter", () => {
-        if (!sidebarOpen && !isSmallScreen()) {
-          clearTimeout(hoverOutTimeout);
-          hoverInTimeout = setTimeout(() => {
-            showLabels();
-            showLogo(true);
-            toggleBottomArea(true);
-
-            if (openDropdownIndex !== null) {
-              openDropdown(openDropdownIndex);
-            }
-          }, 100);
-        }
-      });
-
-      sidebar.addEventListener("mouseleave", () => {
-        if (!sidebarOpen && !isSmallScreen()) {
-          clearTimeout(hoverInTimeout);
-          hoverOutTimeout = setTimeout(() => {
-            hideLabels();
-            showLogo(false);
-            toggleBottomArea(false);
-            closeAllDropdowns();
-          }, 100);
-        }
-      });
-
-      document.querySelectorAll(".dropdown-toggle").forEach((button, index) => {
-        const parentLi = button.closest("li");
-        const dropdown = parentLi.querySelector(".dropdown-menu");
-        const icon = parentLi.querySelector(".dropdown-icon");
-
-        if (parentLi.classList.contains("active") && dropdown) {
-          dropdown.classList.remove("max-h-0");
-          dropdown.classList.add("max-h-[500px]");
-          if (icon) icon.classList.add("rotate-180");
-          openDropdownIndex = index;
-        }
-
-        button.addEventListener("click", function () {
-          const isOpen = dropdown.classList.contains("max-h-[500px]");
-
-          closeAllDropdowns();
-
-          if (!isOpen) {
-            dropdown.classList.remove("max-h-0");
-            dropdown.classList.add("max-h-[500px]");
-            if (icon) icon.classList.add("rotate-180");
-            openDropdownIndex = index;
-          } else {
-            if (icon) icon.classList.remove("rotate-180");
-            openDropdownIndex = null;
-          }
-        });
-      });
-
-      initSidebar();
-
-      window.toggleSidebar = toggleSidebar;
-      // Close sidebar on outside click for small screens
-      document.addEventListener("click", function (event) {
-        const isClickInsideSidebar = sidebar.contains(event.target);
-        const isClickToggleIcon = icon.contains(event.target);
-
-        if (
-          isSmallScreen() &&
-          sidebarOpen &&
-          !isClickInsideSidebar &&
-          !isClickToggleIcon
-        ) {
-          setSidebarSmall(); // hide sidebar if click outside on mobile
-        }
-      });
-    </script>
+  // Expose toggleSidebar function globally if needed (e.g. onclick)
+  window.toggleSidebar = toggleSidebar;
+</script>
 
     <script>
       window.addEventListener("load", () => {
